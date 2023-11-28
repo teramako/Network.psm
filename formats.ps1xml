@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <ViewDefinitions>
+        <View>
+            <Name>IPCalc-List</Name>
+            <ViewSelectedBy>
+                <TypeName>CalcedIPAddress</TypeName>
+            </ViewSelectedBy>
+            <ListControl>
+                <ListEntries>
+                    <ListEntry>
+                        <ListItems>
+                            <ListItem>
+                                <Label>IP</Label>
+                                <ScriptBlock>$_.IP.ToDisplayString()</ScriptBlock>
+                            </ListItem>
+                            <ListItem>
+                                <Label>Netmask</Label>
+                                <ScriptBlock>$_.Netmask.ToDisplayString()</ScriptBlock>
+                            </ListItem>
+                            <ListItem>
+                                <Label>Wildcard</Label>
+                                <ScriptBlock>$_.Wildcard.ToDisplayString()</ScriptBlock>
+                            </ListItem>
+                            <ListItem>
+                                <Label>Network</Label>
+                                <ScriptBlock>$_.Network.ToDisplayString()</ScriptBlock>
+                            </ListItem>
+                            <ListItem>
+                                <Label>HostMin</Label>
+                                <ScriptBlock>$_.HostMin.ToDisplayString()</ScriptBlock>
+                            </ListItem>
+                            <ListItem>
+                                <Label>HostMax</Label>
+                                <ScriptBlock>$_.HostMax.ToDisplayString()</ScriptBlock>
+                            </ListItem>
+                            <ListItem>
+                                <Label>Broadcast</Label>
+                                <ScriptBlock>$_.BroadCast.ToDisplayString()</ScriptBlock>
+                            </ListItem>
+                            <ListItem>
+                                <PropertyName>Flags</PropertyName>
+                            </ListItem>
+                        </ListItems>
+                    </ListEntry>
+                </ListEntries>
+            </ListControl>
+        </View>
+        <View>
+            <Name>IPCalc-Table</Name>
+            <ViewSelectedBy>
+                <TypeName>CalcedIPAddress</TypeName>
+            </ViewSelectedBy>
+            <TableControl>
+                <AutoSize/>
+                <TableHeaders>
+                    <TableColumnHeader><!-- IP -->
+                        <Label>IP</Label>
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader><!-- Netmask-->
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader><!-- Network -->
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader><!-- HostMin -->
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader><!-- HostMax -->
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader><!-- Broadcast -->
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader/><!-- Flags -->
+                </TableHeaders>
+                <TableRowEntries>
+                    <TableRowEntry>
+                        <TableColumnItems>
+                            <TableColumnItem>
+                                <PropertyName>IP</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Netmask</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Network</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>HostMin</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>HostMax</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Broadcast</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Flags</PropertyName>
+                            </TableColumnItem>
+                        </TableColumnItems>
+                    </TableRowEntry>
+                </TableRowEntries>
+            </TableControl>
+        </View>
+    </ViewDefinitions>
+</Configuration>
