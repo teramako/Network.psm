@@ -53,7 +53,7 @@ class BitIPAddress : System.Net.IPAddress {
             }
             Mask {
                 $msg = "{0}{1,-22}{2}" -F $global:PSStyle.Foreground.Blue, ("{0} = {1}" -f $ipAddr, $this.Range), $global:PSStyle.Reset
-                $bit = "{0}{1} {2}{3}" -F $global:PSStyle.Foreground.Yellow, $bitLeft, $bitRight, $global:PSStyle.Reset
+                $bit = "{0}{1} {2}{3}" -F $global:PSStyle.Foreground.Red, $bitLeft, $bitRight, $global:PSStyle.Reset
                 "{0} {1}" -f $msg, $bit
             }
             Network {
